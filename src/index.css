@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pixel-bg: #1a1a2e;
+  --color-pixel-bg-light: #252545;
+  --color-pixel-panel: #2a2a4a;
+  --color-pixel-border: #4a4a6a;
+  --color-pixel-primary: #7c6eff;
+  --color-pixel-secondary: #ff6eb4;
+  --color-pixel-accent: #ffcc00;
+  --color-pixel-green: #4ade80;
+  --color-pixel-red: #ef4444;
+  --color-pixel-cyan: #22d3ee;
+  --color-pixel-text: #e8e8f0;
+  --color-pixel-text-dim: #8888aa;
+  --color-pixel-white: #f0f0ff;
+
+  --font-pixel: "PressStart", monospace;
+}
+
+@font-face {
+  font-family: "PressStart";
+  src: url("https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2") format("woff2");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--color-pixel-bg);
+  color: var(--color-pixel-text);
+  font-family: var(--font-pixel);
+  overflow-x: hidden;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 像素风按钮 */
+.pixel-btn {
+  position: relative;
+  background: var(--color-pixel-primary);
+  color: var(--color-pixel-white);
+  padding: 10px 20px;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow:
+    4px 4px 0 #4a3eb8,
+    -2px -2px 0 #9d8eff inset;
+  transition: transform 0.05s;
+  text-transform: uppercase;
+}
+
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow:
+    2px 2px 0 #4a3eb8,
+    -2px -2px 0 #9d8eff inset;
+}
+
+.pixel-btn-secondary {
+  background: var(--color-pixel-secondary);
+  box-shadow:
+    4px 4px 0 #c44a8a,
+    -2px -2px 0 #ff96cc inset;
+}
+
+.pixel-btn-secondary:active {
+  box-shadow:
+    2px 2px 0 #c44a8a,
+    -2px -2px 0 #ff96cc inset;
+}
+
+.pixel-btn-accent {
+  background: var(--color-pixel-accent);
+  color: #1a1a2e;
+  box-shadow:
+    4px 4px 0 #cc9900,
+    -2px -2px 0 #ffe066 inset;
+}
+
+.pixel-btn-accent:active {
+  box-shadow:
+    2px 2px 0 #cc9900,
+    -2px -2px 0 #ffe066 inset;
+}
+
+/* 像素面板 */
+.pixel-panel {
+  background: var(--color-pixel-panel);
+  border: 3px solid var(--color-pixel-border);
+  box-shadow:
+    6px 6px 0 rgba(0, 0, 0, 0.3),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 2px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* 像素输入框 */
+.pixel-input {
+  background: #111128;
+  border: 3px solid var(--color-pixel-border);
+  color: var(--color-pixel-text);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  padding: 8px 12px;
+  outline: none;
+  width: 100%;
+  box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.pixel-input:focus {
+  border-color: var(--color-pixel-primary);
+}
+
+.pixel-input::placeholder {
+  color: var(--color-pixel-text-dim);
+}
+
+/* 像素风选中态 */
+.pixel-selected {
+  border-color: var(--color-pixel-accent) !important;
+  box-shadow:
+    0 0 0 2px var(--color-pixel-accent),
+    6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* 闪烁动画 */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.pixel-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* 像素风状态条 */
+.pixel-bar {
+  height: 12px;
+  background: #111128;
+  border: 2px solid var(--color-pixel-border);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.pixel-bar-fill {
+  height: 100%;
+  transition: width 0.3s steps(10);
+}
+
+/* 星星背景 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
