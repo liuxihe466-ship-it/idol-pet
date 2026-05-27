@@ -16,7 +16,7 @@ interface ResultState {
 }
 
 export default function App() {
-  const { data, mood, isNew, initPet, doAction, resetPet } = usePetData()
+  const { data, mood, isNew, justEvolved, initPet, doAction, resetPet } = usePetData()
   const [view, setView] = useState<View>(isNew ? 'quiz' : 'pet')
   const [result, setResult] = useState<ResultState | null>(null)
 
@@ -58,6 +58,7 @@ export default function App() {
         <PetPage
           data={data}
           mood={mood}
+          justEvolved={justEvolved}
           onAction={doAction}
           onReset={handleReset}
         />

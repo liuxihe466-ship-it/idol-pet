@@ -106,6 +106,41 @@ export const ANIMALS: Record<AnimalType, AnimalDef> = {
     description: '冷艳神秘，拥有致命吸引力',
     colors: ['#2d8659', '#1a5c3a', '#c8f5dc', '#4ade80', '#0d3320', '#1a1a2e', '#ffcc00', '#ffffff'],
   },
+  'black-cat': {
+    type: 'black-cat',
+    name: '黑猫',
+    icon: '🐈‍⬛',
+    description: '神秘的暗夜精灵，只在深夜出没',
+    colors: ['#1a1a2a', '#0d0d1a', '#2a2a3a', '#7c6eff', '#111118', '#1a1a2e', '#ffcc00', '#ffffff'],
+  },
+  penguin: {
+    type: 'penguin',
+    name: '企鹅',
+    icon: '🐧',
+    description: '看着呆呆的，其实内心戏超多',
+    colors: ['#1a1a2e', '#0d0d1a', '#ffffff', '#ffcc00', '#2d2d3e', '#1a1a2e', '#ff6eb4', '#87ceeb'],
+  },
+  parrot: {
+    type: 'parrot',
+    name: '鹦鹉',
+    icon: '🦜',
+    description: '话匣子打开就停不下来，快乐传播机',
+    colors: ['#4ade80', '#22c55e', '#ffcc00', '#ff6b35', '#166534', '#1a1a2e', '#ff6eb4', '#ffffff'],
+  },
+  otter: {
+    type: 'otter',
+    name: '水獭',
+    icon: '🦦',
+    description: '永远在玩，手拉手睡觉的小可爱',
+    colors: ['#8b6914', '#6b4e11', '#f5e6c8', '#a0822b', '#3d2b0a', '#1a1a2e', '#ffcc00', '#87ceeb'],
+  },
+  hedgehog: {
+    type: 'hedgehog',
+    name: '刺猬',
+    icon: '🦔',
+    description: '外表扎人内心柔软，慢热但真诚',
+    colors: ['#8b7355', '#6b5840', '#f5e6c8', '#a08b6b', '#3d3020', '#1a1a2e', '#ffcc00', '#ffffff'],
+  },
 }
 
 // 像素帧类型
@@ -249,4 +284,9 @@ export const ANIMAL_SPRITES: Record<AnimalType, AnimalSprite> = {
   wolf: generateSprite('pointed', 'long', 0),
   owl: generateSprite('pointed', 'none', 2),
   snake: generateSprite('none', 'long', 2),
+  'black-cat': generateSprite('pointed', 'long', 4),
+  penguin: generateSprite('none', 'none', 3),
+  parrot: generateSprite('none', 'short', 3),
+  otter: generateSprite('round', 'long', 3),
+  hedgehog: generateSprite('none', 'none', 2),
 }

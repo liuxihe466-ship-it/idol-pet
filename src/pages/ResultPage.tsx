@@ -21,7 +21,7 @@ export default function ResultPage({ animal: matchedAnimal, reason: matchedReaso
   const [currentReason, setCurrentReason] = useState(matchedReason)
 
   const animalDef = ANIMALS[currentAnimal]
-  const nickname = answers.nickname || answers.idolName
+  const nickname = answers.nickname
 
   useEffect(() => {
     const timer = setTimeout(() => setRevealed(true), 1500)
@@ -51,6 +51,8 @@ export default function ResultPage({ animal: matchedAnimal, reason: matchedReaso
       },
       lastUpdated: Date.now(),
       createdAt: Date.now(),
+      totalInteractions: 0,
+      evolutionStage: 0,
     }
     onStart(petData)
   }

@@ -9,7 +9,6 @@ interface QuizPageProps {
 }
 
 const initialAnswers: QuizAnswers = {
-  idolName: '',
   nickname: '',
   gender: 'male',
   eyeType: 'round',
@@ -17,6 +16,7 @@ const initialAnswers: QuizAnswers = {
   faceShape: 'round',
   vibe: 'cute',
   personality: [],
+  habits: [],
 }
 
 export default function QuizPage({ onComplete }: QuizPageProps) {

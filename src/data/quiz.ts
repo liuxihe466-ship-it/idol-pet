@@ -10,16 +10,8 @@ export interface QuizQuestion {
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
-    id: 'idolName',
-    title: '你的爱豆是谁？',
-    subtitle: '告诉我TA的名字吧',
-    type: 'text',
-    field: 'idolName',
-    placeholder: '输入爱豆名字...',
-  },
-  {
     id: 'nickname',
-    title: '你对TA的昵称？',
+    title: '给你的爱豆起个昵称吧',
     subtitle: '你平时怎么叫TA',
     type: 'text',
     field: 'nickname',
@@ -96,7 +88,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     id: 'personality',
     title: '爱豆的性格？',
-    subtitle: '可以多选哦，选最突出的',
+    subtitle: '可以多选，选最突出的',
     type: 'multi',
     field: 'personality',
     options: [
@@ -108,6 +100,21 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { value: 'tender', label: '温柔体贴', icon: '💗' },
       { value: 'bossy', label: '霸道/强势', icon: '👑' },
       { value: 'funny', label: '搞笑/幽默', icon: '😂' },
+    ],
+  },
+  {
+    id: 'habits',
+    title: '爱豆的日常习惯？',
+    subtitle: '可以多选哦',
+    type: 'multi',
+    field: 'habits',
+    options: [
+      { value: 'night-owl', label: '夜猫子/熬夜', icon: '🌙' },
+      { value: 'active', label: '闲不住/爱运动', icon: '🏃' },
+      { value: 'phone', label: '手机不离手', icon: '📱' },
+      { value: 'tidy', label: '整理控/爱干净', icon: '🧹' },
+      { value: 'singing', label: '随时哼歌', icon: '🎵' },
+      { value: 'sleepy', label: '嗜睡/爱赖床', icon: '😴' },
     ],
   },
 ]
